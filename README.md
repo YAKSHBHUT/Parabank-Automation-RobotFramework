@@ -25,9 +25,9 @@ Conditional Account Creation (Checking/Savings) <br>
 
 Tech Stack
 
-Robot Framework
+* Robot Framework
 
-SeleniumLibrary
+* SeleniumLibrary
 
 Python (for custom keywords)
 
