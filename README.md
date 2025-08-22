@@ -8,7 +8,7 @@ The framework automates core banking workflows such as user login, account overv
 
 Key Features
 
-✅ Page Object Model (POM) for modular and reusable test design
+✅ Page Object Model (POM) for modular and reusable test design <br>
 ✅ Data-Driven Testing with dynamic test inputs
 ✅ Automated Functional Test Scenarios:
 
