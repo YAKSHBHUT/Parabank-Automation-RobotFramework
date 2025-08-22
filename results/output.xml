@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3 (Python 3.13.0 on win32)" generated="2025-08-22T13:20:04.696247" rpa="false" schemaversion="5">
+<suite id="s1" name="PARA BANK QA testing" source="C:\Users\BHUTY\OneDrive\Desktop\PARA_BANK_QA_testing">
+<suite id="s1-s1" name="Tests" source="C:\Users\BHUTY\OneDrive\Desktop\PARA_BANK_QA_testing\tests">
+<suite id="s1-s1-s1" name="Login Tests" source="C:\Users\BHUTY\OneDrive\Desktop\PARA_BANK_QA_testing\tests\login_tests.robot">
+<test id="s1-s1-s1-t1" name="login" line="6">
+<kw name="login with credentials" owner="login">
+<kw name="open Login page" owner="login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-08-22T13:20:04.962108" level="INFO">Opening browser 'chrome' to base url 'https://parabank.parasoft.com/parabank/index.htm'.</msg>
+<arg>browser=${browser}</arg>
+<arg>url=${url}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-08-22T13:20:04.961616" elapsed="2.356583"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-08-22T13:20:07.318443" elapsed="0.032431"/>
+</kw>
+<kw name="Set Selenium Speed" owner="SeleniumLibrary">
+<arg>1</arg>
+<doc>Sets the delay that is waited after each Selenium command.</doc>
+<status status="PASS" start="2025-08-22T13:20:07.351375" elapsed="0.000655"/>
+</kw>
+<status status="PASS" start="2025-08-22T13:20:04.960820" elapsed="2.391658"/>
+</kw>
+<kw name="Enter username" owner="login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-08-22T13:20:07.353803" level="INFO">Typing text 'yaksh@06' into text field 'name:username'.</msg>
+<arg>name:username</arg>
+<arg>text=${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-22T13:20:07.353335" elapsed="3.082978"/>
+</kw>
+<arg>${username}</arg>
+<status status="PASS" start="2025-08-22T13:20:07.352851" elapsed="3.083660"/>
+</kw>
+<kw name="Enter password" owner="login">
+<kw name="Input Password" owner="SeleniumLibrary">
+<msg time="2025-08-22T13:20:10.437550" level="INFO">Typing password into text field 'name:password'.</msg>
+<msg time="2025-08-22T13:20:12.470941" level="INFO">Temporally setting log level to: NONE</msg>
+<arg>name:password</arg>
+<arg>password=${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-22T13:20:10.437204" elapsed="3.076036"/>
+</kw>
+<arg>${password}</arg>
+<status status="PASS" start="2025-08-22T13:20:10.436716" elapsed="3.076704"/>
+</kw>
+<kw name="Click Login button" owner="login">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-08-22T13:20:13.514328" level="INFO">Clicking element '//input[@value="Log In"]'.</msg>
+<arg>//input[@value="Log In"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-08-22T13:20:13.514043" elapsed="3.528113"/>
+</kw>
+<status status="PASS" start="2025-08-22T13:20:13.513611" elapsed="3.528770"/>
+</kw>
+<kw name="Verify login" owner="login">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-08-22T13:20:19.057702" level="INFO">Current page contains text 'Welcome'.</msg>
+<arg>Welcome</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-08-22T13:20:17.043155" elapsed="2.014778"/>
+</kw>
+<status status="PASS" start="2025-08-22T13:20:17.042584" elapsed="2.015507"/>
+</kw>
+<arg>${username}</arg>
+<arg>${password}</arg>
+<status status="PASS" start="2025-08-22T13:20:04.960014" elapsed="14.098182"/>
+</kw>
+<status status="PASS" start="2025-08-22T13:20:04.956903" elapsed="14.101998"/>
+</test>
+<status status="PASS" start="2025-08-22T13:20:04.746473" elapsed="14.316658"/>
+</suite>
+<status status="PASS" start="2025-08-22T13:20:04.741893" elapsed="14.325068"/>
+</suite>
+<status status="PASS" start="2025-08-22T13:20:04.700848" elapsed="14.369470"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="PARA BANK QA testing" id="s1" pass="1" fail="0" skip="0">PARA BANK QA testing</stat>
+<stat name="Tests" id="s1-s1" pass="1" fail="0" skip="0">PARA BANK QA testing.Tests</stat>
+<stat name="Login Tests" id="s1-s1-s1" pass="1" fail="0" skip="0">PARA BANK QA testing.Tests.Login Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

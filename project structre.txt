@@ -1,0 +1,24 @@
+parabank_project/
+├── tests/
+│   ├── login_tests.robot
+│   ├── registration_tests.robot
+│   ├── account_overview_tests.robot
+│   ├── transfer_funds_tests.robot
+│   ├── open_account_tests.robot
+│   └── logout_tests.robot
+│
+├── resources/
+│   ├── login_page.robot
+│   ├── registration_page.robot
+│   ├── home_page.robot
+│   ├── account_page.robot
+│   ├── transfer_page.robot
+│   └── open_account_page.robot
+│
+├── variables/
+│   └── test_data.robot
+│
+├── results/
+│   └── (auto-generated test logs/reports)
+│
+└── README.md
