@@ -42,13 +42,13 @@ pip install robotframework-seleniumlibrary
 Ensure Chrome WebDriver is installed and added to your system PATH.
 
 #### Running Tests
-* Execute all test cases: *
+* Execute all test cases: <br>
 robot testcases/
 
-* Run a specific test: *
+* Run a specific test: <br>
 robot testcases/login_test.robot
 
-* Reports will be generated in the reports/ folder: *
+* Reports will be generated in the reports/ folder: <br>
 log.html
 report.html
 output.xml
