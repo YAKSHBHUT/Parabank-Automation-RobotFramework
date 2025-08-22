@@ -37,28 +37,6 @@ Chrome WebDriver
 
 GitHub for version control
 
-Project Structure
-Parabank-Automation/
-│
-├── resources/              # Page Object Files
-│   ├── login_page.robot
-│   ├── home_page.robot
-│   ├── account_page.robot
-│   └── transfer_funds_page.robot
-│
-├── testcases/              # Test Cases
-│   ├── login_test.robot
-│   ├── account_overview_test.robot
-│   └── transfer_funds_test.robot
-│
-├── keywords/               # Custom Python Keywords
-│
-├── config/                 # Test Data & Config Files
-│
-├── reports/                # Robot Framework Reports
-│
-└── README.md               # Project Documentation
-
 Setup & Installation
 
 Clone the repository:
