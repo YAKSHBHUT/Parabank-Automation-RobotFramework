@@ -1,0 +1,2 @@
+def verify_transfer(first_old_amount, second_old_amount, amount_transferred, first_new_amount, second_new_amount):
+    return second_new_amount == second_old_amount + amount_transferred and first_new_amount == first_old_amount - amount_transferred  

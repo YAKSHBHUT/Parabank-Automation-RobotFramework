@@ -6,7 +6,7 @@ parabank_project/
 │   ├── transfer_funds_tests.robot
 │   ├── open_account_tests.robot
 │   └── logout_tests.robot
-│
+│  
 ├── resources/
 │   ├── login_page.robot
 │   ├── registration_page.robot
