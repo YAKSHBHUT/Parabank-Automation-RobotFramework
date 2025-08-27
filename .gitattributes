@@ -1,0 +1,27 @@
+# Force .robot files to be counted as Robot Framework
+*.robot linguist-language=RobotFramework
+
+# Force .resource files to be counted as Robot Framework
+*.resource linguist-language=RobotFramework
+
+# Python files
+*.py linguist-language=Python
+
+# Ignore auto-generated HTML reports, logs, and outputs from Robot Framework
+log.html linguist-vendored
+report.html linguist-vendored
+output.xml linguist-vendored
+
+# Ignore entire results or logs folders if present
+logs/* linguist-vendored
+results/* linguist-vendored
+
+# Ignore other temporary or generated files
+*.txt linguist-vendored
+*.csv linguist-vendored
+*.json linguist-vendored
+
+# Ignore any screenshots or media files
+*.png linguist-vendored
+*.jpg linguist-vendored
+*.jpeg linguist-vendored
