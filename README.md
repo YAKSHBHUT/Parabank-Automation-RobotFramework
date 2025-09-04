@@ -1,3 +1,5 @@
+![CI](https://github.com/YAKSHBHUT/Parabank-Automation-RobotFramework/actions/workflows/ci.yml/badge.svg)
+
 ## Parabank Automated Testing Project
 ### Overview
 
