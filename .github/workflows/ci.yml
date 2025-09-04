@@ -13,11 +13,11 @@ jobs:
     steps:
     # 1. Checkout repo
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4  # Update to v4 for latest checkout action
 
     # 2. Set up Python
     - name: Set up Python
-      uses: actions/setup-python@v4
+      uses: actions/setup-python@v5  # Update to v5 for latest Python action
       with:
         python-version: "3.11"
 
@@ -25,20 +25,13 @@ jobs:
     - name: Install dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y chromium-browser chromium-chromedriver
-        python -m pip install --upgrade pip
-        pip install robotframework
-        pip install robotframework-seleniumlibrary
-        pip install robotframework-browser
-        pip install -r requirements.txt || echo "No requirements.txt found"
-        
-    - name: Install Google Chrome
-      run: |
-        sudo apt-get update
         sudo apt-get install -y google-chrome-stable
+        python -m pip install --upgrade pip
+        pip install robotframework robotframework-seleniumlibrary
+        pip install -r requirements.txt || echo "No requirements.txt found"
 
     # 4. Run Robot Framework tests in order
-    - name: Run Robot Framework tests in order
+    - name: Run Robot Framework tests
       run: |
         robot -d results \
         ./tests/ci_cd.robot \
