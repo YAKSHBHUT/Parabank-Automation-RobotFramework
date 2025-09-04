@@ -33,12 +33,12 @@ jobs:
     - name: Run Robot Framework tests in order
       run: |
         robot -d results \
-          tests/ci_cd.robot \
-          tests/registration_tests.robot \
-          tests/login_tests.robot \
-          tests/account_overview_tests.robot \
-          tests/open_account_tests.robot \
-          tests/transfer_funds_tests.robot
+        ./tests/ci_cd.robot \
+        ./tests/registration_tests.robot \
+        ./tests/login_tests.robot \
+        ./tests/account_overview_tests.robot \
+        ./tests/open_account_tests.robot \
+        ./tests/transfer_funds_tests.robot
 
     # 5. Upload results as artifact (use v4)
     - name: Upload test results
