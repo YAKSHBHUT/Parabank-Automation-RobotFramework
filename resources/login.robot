@@ -6,11 +6,9 @@ Suite Teardown  Close Browser
 
 *** Keywords ***
 Open Browser To Login Page
-    Open Browser    https://parabank.parasoft.com/parabank/index.htm    chrome
+    Open Browser    https://parabank.parasoft.com/parabank/index.htm    chrome    executable_path=/usr/bin/chromedriver    options=--headless,--no-sandbox,--disable-dev-shm-usage,--remote-debugging-port=9222
     Maximize Browser Window
     Set Selenium Speed    1
-    # If running in GitHub Actions, use headless mode:
-    # options=--headless,--no-sandbox,--disable-dev-shm-usage,--remote-debugging-port=9222
 
 Enter Username
     [Arguments]    ${username}

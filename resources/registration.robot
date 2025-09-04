@@ -7,7 +7,7 @@ Suite Teardown    Close Browser
 *** Keywords ***
 Open Browser To Registration Page
     [Arguments]    ${url}=https://parabank.parasoft.com/parabank/index.htm    ${browser}=chrome
-    Open Browser    ${url}    ${browser}    options=--headless,--no-sandbox,--disable-dev-shm-usage,--remote-debugging-port=9222
+    Open Browser    ${url}    ${browser}    executable_path=/usr/bin/chromedriver    options=--headless,--no-sandbox,--disable-dev-shm-usage,--remote-debugging-port=9222
     Maximize Browser Window
     Set Selenium Speed    1
 

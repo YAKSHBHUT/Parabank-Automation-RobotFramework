@@ -30,7 +30,13 @@ jobs:
         pip install robotframework robotframework-seleniumlibrary
         pip install -r requirements.txt || echo "No requirements.txt found"
 
-    # 4. Run Robot Framework tests in order
+    # 4. Verify Chrome and ChromeDriver
+    - name: Verify Chrome installation
+      run: |
+        google-chrome --version
+        chromedriver --version
+
+    # 5. Run Robot Framework tests
     - name: Run Robot Framework tests
       run: |
         robot -d results \
@@ -41,7 +47,7 @@ jobs:
         ./tests/open_account_tests.robot \
         ./tests/transfer_funds_tests.robot
 
-    # 5. Upload results as artifact
+    # 6. Upload results as artifact
     - name: Upload test results
       uses: actions/upload-artifact@v4
       with:

@@ -1,5 +1,7 @@
 *** Settings ***
 Resource    ../resources/registration.robot
+Suite Setup       Open Browser To Registration Page
+Suite Teardown    Close Browser
 
 *** Test Cases ***
 registration

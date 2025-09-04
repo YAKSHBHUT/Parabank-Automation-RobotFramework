@@ -2,6 +2,7 @@
 Library    SeleniumLibrary
 Resource    ../variables/variables.robot
 
+
 *** Keywords ***
 Clean_db
     Open Browser    browser=${browser}    url=${url}
