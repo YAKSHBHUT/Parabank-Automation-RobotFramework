@@ -1,0 +1,4 @@
+robotframework==7.0
+robotframework-seleniumlibrary==6.2.0
+selenium==4.22.0
+python== 3.10
