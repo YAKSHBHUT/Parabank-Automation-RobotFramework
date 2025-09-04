@@ -1,32 +1,34 @@
 *** Settings ***
-Resource   ../variables/variables.robot
-Library    SeleniumLibrary
+Resource    ../variables/variables.robot
+Library     SeleniumLibrary
+Suite Setup     Open Browser To Login Page
+Suite Teardown  Close Browser
 
 *** Keywords ***
-open Login page
-    Open Browser    browser=${browser}    url=${url}
+Open Browser To Login Page
+    Open Browser    https://parabank.parasoft.com/parabank/index.htm    chrome
     Maximize Browser Window
     Set Selenium Speed    1
-    
-Enter username
-    [Arguments]    ${username}
-    Input Text    name:username    text=${username}
+    # If running in GitHub Actions, use headless mode:
+    # options=--headless,--no-sandbox,--disable-dev-shm-usage,--remote-debugging-port=9222
 
-Enter password
+Enter Username
+    [Arguments]    ${username}
+    Input Text    name=username    ${username}
+
+Enter Password
     [Arguments]    ${password}
-    Input Password    name:password    password=${password}
-    
-Click Login button
+    Input Password    name=password    ${password}
+
+Click Login Button
     Click Element    //input[@value="Log In"]
 
-Verify login 
+Verify Login
     Page Should Contain    Welcome
 
-login with credentials
+Login With Credentials
     [Arguments]    ${username}    ${password}
-    open Login page
-    Enter username    ${username}
-    Enter password    ${password}
-    Click Login button
-    Verify login
-
+    Enter Username    ${username}
+    Enter Password    ${password}
+    Click Login Button
+    Verify Login

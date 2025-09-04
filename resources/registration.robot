@@ -1,82 +1,76 @@
 *** Settings ***
-Library    SeleniumLibrary
-Resource    ../variables/variables.robot
+Library           SeleniumLibrary
+Resource          ../variables/variables.robot
+Suite Setup       Open Browser To Registration Page
+Suite Teardown    Close Browser
 
 *** Keywords ***
-open page
-    Open Browser    browser=${browser}    url=${url}
+Open Browser To Registration Page
+    [Arguments]    ${url}=https://parabank.parasoft.com/parabank/index.htm    ${browser}=chrome
+    Open Browser    ${url}    ${browser}    options=--headless,--no-sandbox,--disable-dev-shm-usage,--remote-debugging-port=9222
     Maximize Browser Window
     Set Selenium Speed    1
 
-click Registration
+Click Registration
     Click Element    //*[@id="loginPanel"]/p[2]/a
     Page Should Contain    Signing up
 
-enter first_name_registration
+Enter First Name Registration
     [Arguments]    ${first_name}
     Input Text    id:customer.firstName    ${first_name}
 
-enter last_name_registration
+Enter Last Name Registration
     [Arguments]    ${last_name}
     Input Text    id:customer.lastName    ${last_name}
 
-enter address_registration
+Enter Address Registration
     [Arguments]    ${address}
     Input Text    id:customer.address.street    ${address}
 
-enter city_registration
+Enter City Registration
     [Arguments]    ${city}
     Input Text    id:customer.address.city    ${city}
 
-enter State_registration
+Enter State Registration
     [Arguments]    ${state}
-    Input Text    id:customer.address.state   ${state}
+    Input Text    id:customer.address.state    ${state}
 
-enter zipcode_registration
+Enter Zipcode Registration
     [Arguments]    ${zip}
-    Input Text    id:customer.address.zipCode   ${zip}
+    Input Text    id:customer.address.zipCode    ${zip}
 
-enter phone_registration
+Enter Phone Registration
     [Arguments]    ${phone}
-    Input Text    id:customer.phoneNumber   ${phone}
+    Input Text    id:customer.phoneNumber    ${phone}
 
-enter ssn_registration
+Enter SSN Registration
     [Arguments]    ${ssn}
-    Input Text    id:customer.ssn   ${ssn}
+    Input Text    id:customer.ssn    ${ssn}
 
-enter username_registration
+Enter Username Registration
     [Arguments]    ${username}
-    Input Text    id:customer.username  ${username}
+    Input Text    id:customer.username    ${username}
 
-enter password_registration
+Enter Password Registration
     [Arguments]    ${password}
     Input Password    id:customer.password    ${password}
 
-enter confirm_password_registration
+Enter Confirm Password Registration
     [Arguments]    ${confirm_password}
     Input Password    id:repeatedPassword    ${confirm_password}
 
-click register
+Click Register
     Click Element    //input[@value="Register"]
 
-validate new user
+Validate New User
     Page Should Contain    Your account was created successfully. You are now logged in.
 
-register new user
-    [Arguments]    ${first_name}    ${last_name}    ${address}    ${city}    ${state}    ${zip}    ${phone}    ${ssn}    ${user_name}    ${password}    ${confirm_password}
-    
-    open page
-    click Registration
-    enter first_name_registration    ${first_name}
-    enter last_name_registration    ${last_name}
-    enter address_registration    ${address}
-    enter city_registration    ${city}
-    enter State_registration    ${state}
-    enter zipcode_registration    ${zip}
-    enter phone_registration    ${phone}
-    enter ssn_registration    ${ssn}
-    enter username_registration    ${user_name}
-    enter password_registration    ${password}
-    enter confirm_password_registration    ${confirm_password}
-    click register
-    validate new user
+Register New User
+    [Arguments]    ${first_name}    ${last_name}    ${address}    ${city}    ${state}    ${zip}    ${phone}    ${ssn}    ${username}    ${password}    ${confirm_password}
+    Click Registration
+    Enter First Name Registration       ${first_name}
+    Enter Last Name Registration        ${last_name}
+    Enter Address Registration          ${address}
+    Enter City Registration             ${city}
+    Enter State Registration            ${state}
+    Enter Zipcode Registration          ${zip}
