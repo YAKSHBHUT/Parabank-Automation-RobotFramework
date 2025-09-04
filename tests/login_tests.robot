@@ -1,6 +1,6 @@
 *** Settings ***
 Resource    ../resources/login.robot
-Resource    ../resources/homepage.robot
+
 
 *** Test Cases ***
 login
