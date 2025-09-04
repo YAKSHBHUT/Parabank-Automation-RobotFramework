@@ -1,4 +1,10 @@
 parabank_project/
+
+├── .github/
+│   ├── workflows/
+│   ├──├── ci.yml
+│
+│
 ├── tests/
 │   ├── login_tests.robot
 │   ├── registration_tests.robot
