@@ -6,6 +6,7 @@ parabank_project/
 │   ├── transfer_funds_tests.robot
 │   ├── open_account_tests.robot
 │   └── logout_tests.robot
+│   └── find_transactions.robot
 │  
 ├── resources/
 │   ├── login_page.robot
@@ -14,6 +15,7 @@ parabank_project/
 │   ├── account_page.robot
 │   ├── transfer_page.robot
 │   └── open_account_page.robot
+│   └── FindTransactionsPage.robot
 │
 ├── variables/
 │   └── test_data.robot
