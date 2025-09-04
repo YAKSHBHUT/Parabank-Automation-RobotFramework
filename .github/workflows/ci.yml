@@ -34,7 +34,7 @@ jobs:
       run: |
         robot -d results \
         ./tests/ci_cd.robot \
-        ./tests/registration_tests.robot \
+        ./tests/Registration_tests.robot \
         ./tests/login_tests.robot \
         ./tests/account_overview_tests.robot \
         ./tests/open_account_tests.robot \
