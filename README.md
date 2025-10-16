@@ -55,7 +55,12 @@ log.html
 report.html
 output.xml
 
-### Author
+### Authors
 
 👤 Yaksh Bhut
 📧 bhutyaksh@gmail.com
+
+👤 Ishika Vaghasiya
+📧 ishikavaghasiya.ca@gmail.com
+
+
